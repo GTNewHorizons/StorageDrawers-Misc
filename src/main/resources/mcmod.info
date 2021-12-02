@@ -1,9 +1,10 @@
 [
 {
-	"modid": "StorageDrawersMisc",
-	"name": "Storage Drawers: Misc Pack",
+	"modid": "${modId}",
+    "name": "${modName}",
 	"description": "Adds additional wood styles from various mods including ExtraBiomesXL, Highlands, Thaumcraft, and Witchery.",
-	"version": "$version",
+	"version": "${modVersion}",
+    "mcversion": "${minecraftVersion}",
 	"credits": "By jaquadro",
 	"logoFile": "",
 	"url": "http://www.jaquadro.com/",

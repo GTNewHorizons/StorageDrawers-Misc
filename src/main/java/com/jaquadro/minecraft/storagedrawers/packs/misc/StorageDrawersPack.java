@@ -15,7 +15,7 @@ public class StorageDrawersPack
 {
     public static final String MOD_ID = "StorageDrawersMisc";
     public static final String MOD_NAME = "Storage Drawers: Misc Pack";
-    public static final String MOD_VERSION = "@VERSION@";
+    public static final String MOD_VERSION = "GRADLETOKEN_VERSION";
     public static final String SOURCE_PATH = "com.jaquadro.minecraft.storagedrawers.packs.misc.";
 
     public DataResolver[] resolvers = new DataResolver[] {
