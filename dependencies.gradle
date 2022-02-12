@@ -1,5 +1,5 @@
 // Add your dependencies here
 
 dependencies {
-    compile("com.github.GTNewHorizons:StorageDrawers:master-SNAPSHOT:dev")
+    compile('com.github.GTNewHorizons:StorageDrawers:1.11.13-GTNH:dev')
 }
