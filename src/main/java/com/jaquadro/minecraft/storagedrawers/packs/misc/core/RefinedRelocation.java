@@ -11,8 +11,7 @@ import com.jaquadro.minecraft.storagedrawers.packs.misc.StorageDrawersPack;
 import cpw.mods.fml.common.Loader;
 import net.minecraft.block.Block;
 
-public class RefinedRelocation
-{
+public class RefinedRelocation {
     public static Block[] fullDrawers1;
     public static Block[] fullDrawers2;
     public static Block[] fullDrawers4;
@@ -20,13 +19,12 @@ public class RefinedRelocation
     public static Block[] halfDrawers4;
     public static Block[] trim;
 
-    public static void init () {
+    public static void init() {
         IStorageDrawersApi api = StorageDrawersApi.instance();
-        if (api == null)
-            return;
+        if (api == null) return;
 
-        if (!Loader.isModLoaded("RefinedRelocation") || !api.userConfig().integrationConfig().isRefinedRelocationEnabled())
-            return;
+        if (!Loader.isModLoaded("RefinedRelocation")
+                || !api.userConfig().integrationConfig().isRefinedRelocationEnabled()) return;
 
         IPackBlockFactory factory = api.packFactory();
         IPackDataResolver[] resolvers = StorageDrawersPack.instance.resolvers;
@@ -60,28 +58,22 @@ public class RefinedRelocation
         IBlockConfig blockConfig = config.blockConfig();
 
         if (blockConfig.isBlockEnabled(blockConfig.getBlockConfigName(BlockConfiguration.SortingFull1))) {
-            for (int i = 0; i < resolvers.length; i++)
-                factory.registerBlock(fullDrawers1[i], "fullDrawersSort1_" + i);
+            for (int i = 0; i < resolvers.length; i++) factory.registerBlock(fullDrawers1[i], "fullDrawersSort1_" + i);
         }
         if (blockConfig.isBlockEnabled(blockConfig.getBlockConfigName(BlockConfiguration.SortingFull2))) {
-            for (int i = 0; i < resolvers.length; i++)
-                factory.registerBlock(fullDrawers2[i], "fullDrawersSort2_" + i);
+            for (int i = 0; i < resolvers.length; i++) factory.registerBlock(fullDrawers2[i], "fullDrawersSort2_" + i);
         }
         if (blockConfig.isBlockEnabled(blockConfig.getBlockConfigName(BlockConfiguration.SortingFull4))) {
-            for (int i = 0; i < resolvers.length; i++)
-                factory.registerBlock(fullDrawers4[i], "fullDrawersSort4_" + i);
+            for (int i = 0; i < resolvers.length; i++) factory.registerBlock(fullDrawers4[i], "fullDrawersSort4_" + i);
         }
         if (blockConfig.isBlockEnabled(blockConfig.getBlockConfigName(BlockConfiguration.SortingHalf2))) {
-            for (int i = 0; i < resolvers.length; i++)
-                factory.registerBlock(halfDrawers2[i], "halfDrawersSort2_" + i);
+            for (int i = 0; i < resolvers.length; i++) factory.registerBlock(halfDrawers2[i], "halfDrawersSort2_" + i);
         }
         if (blockConfig.isBlockEnabled(blockConfig.getBlockConfigName(BlockConfiguration.SortingHalf4))) {
-            for (int i = 0; i < resolvers.length; i++)
-                factory.registerBlock(halfDrawers4[i], "halfDrawersSort4_" + i);
+            for (int i = 0; i < resolvers.length; i++) factory.registerBlock(halfDrawers4[i], "halfDrawersSort4_" + i);
         }
         if (blockConfig.isBlockEnabled(blockConfig.getBlockConfigName(BlockConfiguration.TrimSorting))) {
-            for (int i = 0; i < resolvers.length; i++)
-                factory.registerBlock(trim[i], "trimSort_" + i);
+            for (int i = 0; i < resolvers.length; i++) factory.registerBlock(trim[i], "trimSort_" + i);
         }
 
         if (!config.addonConfig().showAddonItemsNEI()) {

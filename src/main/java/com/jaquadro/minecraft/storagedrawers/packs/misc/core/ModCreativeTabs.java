@@ -11,32 +11,29 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 
-public final class ModCreativeTabs
-{
-    private ModCreativeTabs () { }
+public final class ModCreativeTabs {
+    private ModCreativeTabs() {}
 
     private static CreativeTabs tabStorageDrawers = null;
 
-    public static CreativeTabs getTabStorageDrawers () {
-        if (tabStorageDrawers != null)
-            return tabStorageDrawers;
+    public static CreativeTabs getTabStorageDrawers() {
+        if (tabStorageDrawers != null) return tabStorageDrawers;
 
         IStorageDrawersApi api = StorageDrawersApi.instance();
-        if (api == null)
-            return null;
+        if (api == null) return null;
 
         IUserConfig config = api.userConfig();
-        if (config.addonConfig().addonItemsUseSeparateTab() && config.addonConfig().showAddonItemsVanilla()) {
-            tabStorageDrawers = new CreativeTabs("storageDrawersMisc")
-            {
+        if (config.addonConfig().addonItemsUseSeparateTab()
+                && config.addonConfig().showAddonItemsVanilla()) {
+            tabStorageDrawers = new CreativeTabs("storageDrawersMisc") {
                 @Override
                 @SideOnly(Side.CLIENT)
-                public Item getTabIconItem () {
+                public Item getTabIconItem() {
                     return getTabItem();
                 }
 
                 @Override
-                public int func_151243_f () {
+                public int func_151243_f() {
                     return 5;
                 }
             };
@@ -45,10 +42,9 @@ public final class ModCreativeTabs
         return tabStorageDrawers;
     }
 
-    private static Item getTabItem () {
+    private static Item getTabItem() {
         IStorageDrawersApi api = StorageDrawersApi.instance();
-        if (api == null)
-            return Item.getItemFromBlock(Blocks.chest);
+        if (api == null) return Item.getItemFromBlock(Blocks.chest);
 
         IBlockConfig blockConfig = api.userConfig().blockConfig();
 
