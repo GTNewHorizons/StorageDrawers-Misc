@@ -9,6 +9,7 @@
 	"logoFile": "",
 	"url": "http://www.jaquadro.com/",
 	"authorList": [ "jaquadro" ],
+	"parent": "StorageDrawers",
 	"requiredMods": [ "Forge", "StorageDrawers" ],
 	"dependencies": [ "StorageDrawers" ],
 	"useDependencyInformation": true
