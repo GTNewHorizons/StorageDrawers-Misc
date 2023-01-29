@@ -1,17 +1,20 @@
 package com.jaquadro.minecraft.storagedrawers.packs.misc.core;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+
 import com.jaquadro.minecraft.storagedrawers.api.IStorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.StorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.config.IBlockConfig;
 import com.jaquadro.minecraft.storagedrawers.api.config.IUserConfig;
 import com.jaquadro.minecraft.storagedrawers.api.pack.BlockConfiguration;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 
 public final class ModCreativeTabs {
+
     private ModCreativeTabs() {}
 
     private static CreativeTabs tabStorageDrawers = null;
@@ -23,9 +26,9 @@ public final class ModCreativeTabs {
         if (api == null) return null;
 
         IUserConfig config = api.userConfig();
-        if (config.addonConfig().addonItemsUseSeparateTab()
-                && config.addonConfig().showAddonItemsVanilla()) {
+        if (config.addonConfig().addonItemsUseSeparateTab() && config.addonConfig().showAddonItemsVanilla()) {
             tabStorageDrawers = new CreativeTabs("storageDrawersMisc") {
+
                 @Override
                 @SideOnly(Side.CLIENT)
                 public Item getTabIconItem() {

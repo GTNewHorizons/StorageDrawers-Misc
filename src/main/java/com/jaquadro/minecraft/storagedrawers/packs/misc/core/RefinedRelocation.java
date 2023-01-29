@@ -1,5 +1,7 @@
 package com.jaquadro.minecraft.storagedrawers.packs.misc.core;
 
+import net.minecraft.block.Block;
+
 import com.jaquadro.minecraft.storagedrawers.api.IStorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.StorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.config.IBlockConfig;
@@ -9,9 +11,9 @@ import com.jaquadro.minecraft.storagedrawers.api.pack.IPackBlockFactory;
 import com.jaquadro.minecraft.storagedrawers.api.pack.IPackDataResolver;
 import com.jaquadro.minecraft.storagedrawers.packs.misc.StorageDrawersPack;
 import cpw.mods.fml.common.Loader;
-import net.minecraft.block.Block;
 
 public class RefinedRelocation {
+
     public static Block[] fullDrawers1;
     public static Block[] fullDrawers2;
     public static Block[] fullDrawers4;
@@ -24,7 +26,8 @@ public class RefinedRelocation {
         if (api == null) return;
 
         if (!Loader.isModLoaded("RefinedRelocation")
-                || !api.userConfig().integrationConfig().isRefinedRelocationEnabled()) return;
+                || !api.userConfig().integrationConfig().isRefinedRelocationEnabled())
+            return;
 
         IPackBlockFactory factory = api.packFactory();
         IPackDataResolver[] resolvers = StorageDrawersPack.instance.resolvers;

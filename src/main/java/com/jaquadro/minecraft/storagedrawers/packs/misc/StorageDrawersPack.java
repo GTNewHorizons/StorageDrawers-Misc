@@ -4,6 +4,7 @@ import com.jaquadro.minecraft.storagedrawers.api.IStorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.StorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.pack.IExtendedDataResolver;
 import com.jaquadro.minecraft.storagedrawers.packs.misc.core.*;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -16,12 +17,13 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
         version = StorageDrawersPack.MOD_VERSION,
         dependencies = "required-after:StorageDrawers;")
 public class StorageDrawersPack {
+
     public static final String MOD_ID = "StorageDrawersMisc";
     public static final String MOD_NAME = "Storage Drawers: Misc Pack";
     public static final String MOD_VERSION = "GRADLETOKEN_VERSION";
     public static final String SOURCE_PATH = "com.jaquadro.minecraft.storagedrawers.packs.misc.";
 
-    public DataResolver[] resolvers = new DataResolver[] {new DataResolver(MOD_ID, 0), new DataResolver(MOD_ID, 1)};
+    public DataResolver[] resolvers = new DataResolver[] { new DataResolver(MOD_ID, 0), new DataResolver(MOD_ID, 1) };
 
     public ModBlocks blocks = new ModBlocks();
 
