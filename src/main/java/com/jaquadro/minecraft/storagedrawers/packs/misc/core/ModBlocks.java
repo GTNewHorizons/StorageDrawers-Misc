@@ -10,6 +10,7 @@ import com.jaquadro.minecraft.storagedrawers.api.pack.BlockConfiguration;
 import com.jaquadro.minecraft.storagedrawers.api.pack.IPackBlockFactory;
 import com.jaquadro.minecraft.storagedrawers.api.pack.IPackDataResolver;
 import com.jaquadro.minecraft.storagedrawers.packs.misc.StorageDrawersPack;
+
 import cpw.mods.fml.common.registry.GameData;
 
 public class ModBlocks {
