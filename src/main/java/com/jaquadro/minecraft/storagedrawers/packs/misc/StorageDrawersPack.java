@@ -3,7 +3,9 @@ package com.jaquadro.minecraft.storagedrawers.packs.misc;
 import com.jaquadro.minecraft.storagedrawers.api.IStorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.StorageDrawersApi;
 import com.jaquadro.minecraft.storagedrawers.api.pack.IExtendedDataResolver;
-import com.jaquadro.minecraft.storagedrawers.packs.misc.core.*;
+import com.jaquadro.minecraft.storagedrawers.packs.misc.core.DataResolver;
+import com.jaquadro.minecraft.storagedrawers.packs.misc.core.ModBlocks;
+import com.jaquadro.minecraft.storagedrawers.packs.misc.core.RefinedRelocation;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;

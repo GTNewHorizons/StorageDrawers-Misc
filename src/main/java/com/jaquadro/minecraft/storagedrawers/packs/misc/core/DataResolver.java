@@ -3,7 +3,10 @@ package com.jaquadro.minecraft.storagedrawers.packs.misc.core;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 
-import com.jaquadro.minecraft.storagedrawers.api.pack.*;
+import com.jaquadro.minecraft.storagedrawers.api.pack.BlockConfiguration;
+import com.jaquadro.minecraft.storagedrawers.api.pack.BlockType;
+import com.jaquadro.minecraft.storagedrawers.api.pack.ExtendedDataResolver;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class DataResolver extends ExtendedDataResolver {
