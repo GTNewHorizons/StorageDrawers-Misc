@@ -1,5 +1,5 @@
 // Add your dependencies here
 
 dependencies {
-    api('com.github.GTNewHorizons:StorageDrawers:1.12.3-GTNH:dev')
+    api('com.github.GTNewHorizons:StorageDrawers:1.13.5-GTNH:dev')
 }
